@@ -1,6 +1,8 @@
 package Lectures.lecture12072014;
 
 
+import Lectures.lecture05072014.Stack;
+
 import java.io.File;
 
 /**
@@ -14,14 +16,22 @@ public class Main {
         queue.enqueue(143);
 
         System.out.println(queue);
-        while (!queue.isEmpty()) {
-            queue.dequeue();
-        }
+
+        reverse(queue);
+        System.out.println(queue);
+
+        while (!queue.isEmpty()) queue.dequeue();
 
         System.out.println(queue);
 
         findFilesWithExe("C:\\ADT\\eclipse");
 
+    }
+
+    private static void reverse(Queue queue) {
+        Stack stack = new Stack();
+        while (!queue.isEmpty()) stack.push(queue.dequeue());
+        while (!stack.isEmpty()) queue.enqueue(stack.pop());
     }
 
     private static void findFilesWithExe(String pathname) {
