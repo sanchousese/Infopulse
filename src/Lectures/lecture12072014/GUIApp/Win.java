@@ -2,15 +2,14 @@ package Lectures.lecture12072014.GUIApp;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-/**
- * Created by Sania_000 on 7/12/2014.
- */
-public class Main extends JFrame {
+public class Win extends JFrame implements ActionListener {
     private JButton but = new JButton("Button");
     private Container container;
 
-    public Main() throws HeadlessException {
+    public Win() throws HeadlessException {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setBounds(10, 10, 500, 400);
         container = getContentPane();
@@ -20,7 +19,12 @@ public class Main extends JFrame {
     }
 
     public static void main(String[] args) {
-        Main window = new Main();
+        Win window = new Win();
         window.setVisible(true);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
     }
 }
