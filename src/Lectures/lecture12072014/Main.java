@@ -40,7 +40,7 @@ public class Main {
             } else
                 queue.enqueue(queue.dequeue());
         }
-        System.out.println("Виграв:\t" + queue.dequeue());
+        System.out.println("Виграв:\t" + queue.getFront());
     }
 
     private static void reverse(Queue queue) {

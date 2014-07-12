@@ -44,7 +44,15 @@ public class Queue<T> {
     public T dequeue() {
         if (isEmpty())
             throw new ArrayIndexOutOfBoundsException();
-        return mas[realIndex(start++)];
+        T result = mas[realIndex(start)];
+        start++;
+        return result;
+    }
+
+    public T getFront() {
+        if (isEmpty())
+            throw new ArrayIndexOutOfBoundsException();
+        return mas[realIndex(start)];
     }
 
     @Override
