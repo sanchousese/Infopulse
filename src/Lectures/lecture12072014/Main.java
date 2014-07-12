@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println(queue);
 
-        reverse(queue);
+        reverseQueue(queue);
         System.out.println(queue);
 
         while (!queue.isEmpty()) queue.dequeue();
@@ -43,7 +43,7 @@ public class Main {
         System.out.println("Виграв:\t" + queue.getFront());
     }
 
-    private static void reverse(Queue queue) {
+    private static void reverseQueue(Queue queue) {
         Stack stack = new Stack();
         while (!queue.isEmpty()) stack.push(queue.dequeue());
         while (!stack.isEmpty()) queue.enqueue(stack.pop());
