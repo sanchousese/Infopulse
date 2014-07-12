@@ -9,6 +9,12 @@ public class Main {
         Queue<Integer> queue = new Queue<Integer>();
         queue.enqueue(13);
         queue.enqueue(34);
+        queue.enqueue(143);
+
+        System.out.println(queue);
+        while (!queue.isEmpty()) {
+            queue.dequeue();
+        }
         System.out.println(queue);
     }
 }

@@ -51,7 +51,7 @@ public class Queue<T> {
     public String toString() {
         String result = "";
         for (int i = start; i < end; i++)
-            result += mas[realIndex(i)];
-        return result;
+            result += mas[realIndex(i)] + "\t";
+        return "Queue:\t" + result;
     }
 }
