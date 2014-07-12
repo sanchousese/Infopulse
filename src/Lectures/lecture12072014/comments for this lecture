@@ -1,3 +1,16 @@
 jose phus problem
 ??? ? ??????????
 counting-out game
+
+1) Write method wich compares two dimentional array by addresses lines
+
+2) void sort(Queue q)
+sort our queue without masive, using stack
+
+3) int search(Stack where, String what)
+How much of times what in where.
+
+4) counting-out game 
+1)if size of queue == 2^n
+2)k=2
+In the queue one the same element, why? Explain!
