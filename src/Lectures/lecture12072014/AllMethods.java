@@ -9,6 +9,13 @@ import java.util.Arrays;
  * Created by Sania_000 on 7/12/2014.
  */
 public class AllMethods {
+    protected static void sortFilesByCharEntries(String path, char c) {
+        String[] strings = new File(path).list();
+        Arrays.sort(strings, new AnyCharComparator(c));
+        System.out.println(Arrays.toString(strings));
+    }
+
+
     protected static void sortFilesBySize(String path) {
         File[] files = new File(path).listFiles();
         Arrays.sort(files, new FileComparatorBySize());

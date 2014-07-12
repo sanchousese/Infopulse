@@ -25,6 +25,9 @@ public class Main extends AllMethods {
         sortFilesByLength("C:\\Windows");
 
         sortFilesBySize("C:\\Users\\Sania_000\\Downloads\\Outlast Whistleblower v1.0.12046.0.0u8 +1DLC Repack by REJ01CE");
+
+        sortFilesByCharEntries("C:/Windows", 'c');
     }
+
 
 }
