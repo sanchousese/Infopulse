@@ -26,6 +26,21 @@ public class Main {
 
         findFilesWithExe("C:\\ADT\\eclipse");
 
+        countingOutGame(10, 3);
+    }
+
+    private static void countingOutGame(int size, int k) {
+        Queue<Integer> queue = new Queue<Integer>();
+        for (int i = 0; i < size; i++) queue.enqueue(i + 1);
+        int counter = 0;
+        while (queue.size() > 1) {
+            if (counter++ == k - 1) {
+                counter = 0;
+                System.out.println("Вибув:\t" + queue.dequeue());
+            } else
+                queue.enqueue(queue.dequeue());
+        }
+        System.out.println("Виграв:\t" + queue.dequeue());
     }
 
     private static void reverse(Queue queue) {
