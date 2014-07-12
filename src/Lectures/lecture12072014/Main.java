@@ -5,9 +5,8 @@ import Lectures.lecture05072014.Stack;
 
 import java.io.File;
 
-/**
- * Created by Sania on 7/12/2014.
- */
+// Created on 7/12/2014.
+
 public class Main {
     public static void main(String[] args) {
         Queue<Integer> queue = new Queue<Integer>();
@@ -27,6 +26,7 @@ public class Main {
         findFilesWithExe("C:\\ADT\\eclipse");
 
         countingOutGame(10, 3);
+
     }
 
     private static void countingOutGame(int size, int k) {
@@ -43,8 +43,8 @@ public class Main {
         System.out.println("Виграв:\t" + queue.getFront());
     }
 
-    private static void reverseQueue(Queue queue) {
-        Stack stack = new Stack();
+    private static <T> void reverseQueue(Queue<T> queue) {
+        Stack<T> stack = new Stack<T>();
         while (!queue.isEmpty()) stack.push(queue.dequeue());
         while (!stack.isEmpty()) queue.enqueue(stack.pop());
     }
@@ -53,9 +53,7 @@ public class Main {
         Queue<String> stringQueue = new Queue<String>();
         String[] file = new File(pathname).list();
 
-        for (int i = 0; i < file.length; i++) {
-            stringQueue.enqueue(file[i]);
-        }
+        for (String aFile : file) stringQueue.enqueue(aFile);
 
         System.out.println(stringQueue);
 
