@@ -38,12 +38,20 @@ public class Queue<T> {
     public void enqueue(T element) {
         if (size() >= mas.length)
             resize();
-        mas[realIndex(end)] = element;
+        mas[realIndex(end++)] = element;
     }
 
     public T dequeue() {
         if (isEmpty())
             throw new ArrayIndexOutOfBoundsException();
         return mas[realIndex(start++)];
+    }
+
+    @Override
+    public String toString() {
+        String result = "";
+        for (int i = start; i < end; i++)
+            result += mas[realIndex(i)];
+        return result;
     }
 }
