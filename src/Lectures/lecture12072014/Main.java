@@ -28,6 +28,4 @@ public class Main extends AllMethods {
 
         sortFilesByCharEntries("C:/Windows", 'c');
     }
-
-
 }

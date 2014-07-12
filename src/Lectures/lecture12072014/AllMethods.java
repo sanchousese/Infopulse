@@ -5,9 +5,7 @@ import Lectures.lecture05072014.Stack;
 import java.io.File;
 import java.util.Arrays;
 
-/**
- * Created by Sania_000 on 7/12/2014.
- */
+
 public class AllMethods {
     protected static void sortFilesByCharEntries(String path, char c) {
         String[] strings = new File(path).list();
