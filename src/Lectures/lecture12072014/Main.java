@@ -4,6 +4,7 @@ package Lectures.lecture12072014;
 import Lectures.lecture05072014.Stack;
 
 import java.io.File;
+import java.util.Arrays;
 
 // Created on 7/12/2014.
 
@@ -27,6 +28,13 @@ public class Main {
 
         countingOutGame(10, 3);
 
+        sortFilesByLength("C:\\Windows");
+    }
+
+    private static void sortFilesByLength(String pathname) {
+        String[] files = new File(pathname).list();
+        Arrays.sort(files, new StringComparator());
+        System.out.println(Arrays.toString(files));
     }
 
     private static void countingOutGame(int size, int k) {
