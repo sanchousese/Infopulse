@@ -40,4 +40,10 @@ public class Queue<T> {
             resize();
         mas[realIndex(end)] = element;
     }
+
+    public T dequeue() {
+        if (isEmpty())
+            throw new ArrayIndexOutOfBoundsException();
+        return mas[realIndex(start++)];
+    }
 }
