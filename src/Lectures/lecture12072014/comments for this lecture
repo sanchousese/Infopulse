@@ -11,6 +11,8 @@ sort our queue without masive, using stack
 How much of times what in where.
 
 4) counting-out game 
-1)if size of queue == 2^n
-2)k=2
+-if size of queue == 2^n
+-k=2
 In the queue one the same element, why? Explain!
+
+5) We need table with one column (Varchar(30)) and get from it we need 3x'1', if 4x'1' - wrong.
