@@ -15,11 +15,8 @@ public class Main {
 
         String ls[] = {"Asm", "Basic", "Pascal", "C++"};
 
-        for (int i = 0; i < ls.length; i++) {
-            System.out.println(ls[i].length() - ls[i].replace("a", "").length() == 2);
-        }
+        for (String l : ls) System.out.println(l.length() - l.replace("a", "").length() == 2);
+        for (String l : ls) System.out.println(l.toLowerCase().matches("([^a]*a[^a]*){2}"));
 
-        for (int i = 0; i < ls.length; i++)
-            System.out.println(ls[i].toLowerCase().matches("([^a]*a[^a]*){2}"));
     }
 }
