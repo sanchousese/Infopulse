@@ -34,15 +34,20 @@ public class Main {
     }
 
 
-    private static void mySort(Object[] mas) {
+    private static void mySort(Comparable[] mas) {
         for (int i = 1; i < mas.length; i++) {
             int currentIndex = i;
-            while ((currentIndex > 0) && ((Comparable) mas[currentIndex]).compareTo(mas[currentIndex - 1]) < 0) {
-                Object temp = mas[currentIndex];
-                mas[currentIndex] = mas[currentIndex - 1];
-                mas[currentIndex - 1] = temp;
+            while ((currentIndex > 0) && mas[currentIndex].compareTo(mas[currentIndex - 1]) < 0) {
+                swap(mas, currentIndex);
                 currentIndex--;
             }
         }
     }
+
+    private static void swap(Object[] mas, int currentIndex) {
+        Object temp = mas[currentIndex];
+        mas[currentIndex] = mas[currentIndex - 1];
+        mas[currentIndex - 1] = temp;
+    }
+
 }
