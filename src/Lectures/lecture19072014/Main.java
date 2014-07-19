@@ -1,5 +1,8 @@
 package Lectures.lecture19072014;
 
+
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         List<Integer> list = new List<Integer>();
@@ -24,5 +27,22 @@ public class Main {
             list1.push(i);
         System.out.println(list1 + "\t" + list1.getSize());
         System.out.println(list1.getElement(4));
+
+        String[] fs = {"B", "c", "D", "d"};
+        mySort(fs);
+        System.out.println(Arrays.toString(fs));
+    }
+
+
+    private static void mySort(Object[] mas) {
+        for (int i = 1; i < mas.length; i++) {
+            int currentIndex = i;
+            while ((currentIndex > 0) && ((Comparable) mas[currentIndex]).compareTo(mas[currentIndex - 1]) < 0) {
+                Object temp = mas[currentIndex];
+                mas[currentIndex] = mas[currentIndex - 1];
+                mas[currentIndex - 1] = temp;
+                currentIndex--;
+            }
+        }
     }
 }
