@@ -18,5 +18,11 @@ public class Main {
         for (String l : ls) System.out.println(l.length() - l.replace("a", "").length() == 2);
         for (String l : ls) System.out.println(l.toLowerCase().matches("([^a]*a[^a]*){2}"));
 
+
+        CircleList<Integer> list1 = new CircleList<Integer>();
+        for (int i = 0; i < 10; i++)
+            list1.push(i);
+        System.out.println(list1 + "\t" + list1.getSize());
+        System.out.println(list1.getElement(4));
     }
 }
