@@ -1,12 +1,10 @@
-package Lectures.lecture19072014;
+package Lectures.lecture26072014;
 
 
 public class CircularDoubleLinkedList<T> extends DoubleLinkedList<T> {
 
-    private Node<T> head;
-
     @Override
-    public void put(T value) {
+    public void push_back(T value) {
         if (curr == null) {
             curr = new Node<T>(value, null, null);
             curr.next = curr;
@@ -25,6 +23,11 @@ public class CircularDoubleLinkedList<T> extends DoubleLinkedList<T> {
         if (b)
             head.next = curr.next;
         curr = curr.next;
+    }
+
+    @Override
+    public void push_front(T value) {
+        super.push_front(value);
     }
 
     @Override

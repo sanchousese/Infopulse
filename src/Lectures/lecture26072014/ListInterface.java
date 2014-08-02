@@ -1,8 +1,10 @@
-package Lectures.lecture19072014;
+package Lectures.lecture26072014;
 
 public interface ListInterface<T> {
 
-    void put(T value);
+    void push_back(T value);
+
+    void push_front(T value);
 
     void addTo(int index, T value);
 
